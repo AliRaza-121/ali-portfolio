@@ -1,10 +1,13 @@
+import dynamic from "next/dynamic";
 import Navbar from "@/components/sections/Navbar";
 import Hero from "@/components/sections/Hero";
-import About from "@/components/sections/About";
-import Skills from "@/components/sections/Skills";
-import Projects from "@/components/sections/Projects";
-import Contact from "@/components/sections/Contact";
-import Footer from "@/components/sections/Footer";
+
+// Lazy load below the fold sections
+const About = dynamic(() => import("@/components/sections/About"));
+const Skills = dynamic(() => import("@/components/sections/Skills"));
+const Projects = dynamic(() => import("@/components/sections/Projects"));
+const Contact = dynamic(() => import("@/components/sections/Contact"));
+const Footer = dynamic(() => import("@/components/sections/Footer"));
 
 export default function Home() {
   return (

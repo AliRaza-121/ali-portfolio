@@ -1,24 +1,28 @@
-import { Inter, Space_Grotesk, Sora, JetBrains_Mono } from "next/font/google";
+import { Space_Grotesk, Sora, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  variable: "--font-space",
+  variable: "--font-heading",
+  display: "swap",
+  preload: true,
+  weight: ["400", "500", "600", "700"],
 });
 
 const sora = Sora({
   subsets: ["latin"],
-  variable: "--font-sora",
+  variable: "--font-sans",
+  display: "swap",
+  preload: true,
+  weight: ["300", "400", "500"],
 });
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
+  display: "swap",
+  preload: false,
+  weight: ["400", "500"],
 });
 
 export const metadata = {
@@ -31,7 +35,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${spaceGrotesk.variable} ${sora.variable} ${jetbrainsMono.variable} font-sans antialiased`}
+        className={`${spaceGrotesk.variable} ${sora.variable} ${jetbrainsMono.variable} antialiased bg-[#0a0a0a] text-white`}
       >
         {children}
       </body>

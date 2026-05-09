@@ -4,6 +4,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { Code2, Coffee, Rocket, Users } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const quickFacts = [
   { icon: <Code2 className="w-5 h-5 text-blue-500" />, label: "Experience", value: "3+ Years" },
@@ -24,10 +25,13 @@ export default function About() {
           <ScrollReveal direction="left" delay={0.2}>
             <div className="relative group">
               <div className="w-full aspect-square max-w-sm mx-auto rounded-2xl bg-[#141414] border border-[#1f1f1f] overflow-hidden relative transition-all duration-500 group-hover:border-blue-500/30 group-hover:shadow-[0_0_30px_rgba(59,130,246,0.1)]">
-               <img
+      <Image
   src="/ali.jpg"
   alt="Ali Raza"
-  className="w-full h-full object-cover"
+  fill
+  className="object-cover transition-transform duration-500 group-hover:scale-105"
+  priority
+  sizes="(max-width: 768px) 280px, 384px"
 />
                 <div className="absolute top-0 right-0 w-20 h-20 bg-blue-500/5 rounded-bl-3xl transition-all duration-500 group-hover:w-24 group-hover:h-24 group-hover:bg-blue-500/10" />
                 <div className="absolute bottom-0 left-0 w-20 h-20 bg-blue-500/5 rounded-tr-3xl transition-all duration-500 group-hover:w-24 group-hover:h-24 group-hover:bg-blue-500/10" />
