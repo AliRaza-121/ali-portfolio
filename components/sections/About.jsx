@@ -24,14 +24,11 @@ export default function About() {
           <ScrollReveal direction="left" delay={0.2}>
             <div className="relative group">
               <div className="w-full aspect-square max-w-sm mx-auto rounded-2xl bg-[#141414] border border-[#1f1f1f] overflow-hidden relative transition-all duration-500 group-hover:border-blue-500/30 group-hover:shadow-[0_0_30px_rgba(59,130,246,0.1)]">
-                <div className="w-full h-full flex items-center justify-center">
-                  <div className="text-center">
-                    <motion.div whileHover={{ scale: 1.1, rotate: 5 }} className="w-24 h-24 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mx-auto mb-4 transition-all duration-300 hover:bg-blue-500/20 hover:border-blue-500/40">
-                      <span className="text-4xl">👨‍💻</span>
-                    </motion.div>
-                    <p className="text-zinc-500 text-sm" style={{ fontFamily: "var(--font-heading)" }}>Ali Raza</p>
-                  </div>
-                </div>
+               <img
+  src="/ali.jpg"
+  alt="Ali Raza"
+  className="w-full h-full object-cover"
+/>
                 <div className="absolute top-0 right-0 w-20 h-20 bg-blue-500/5 rounded-bl-3xl transition-all duration-500 group-hover:w-24 group-hover:h-24 group-hover:bg-blue-500/10" />
                 <div className="absolute bottom-0 left-0 w-20 h-20 bg-blue-500/5 rounded-tr-3xl transition-all duration-500 group-hover:w-24 group-hover:h-24 group-hover:bg-blue-500/10" />
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

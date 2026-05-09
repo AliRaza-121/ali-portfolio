@@ -219,32 +219,23 @@ export default function Hero() {
             </span>
           </a>
         </div>
-
-        {/* Social Links */}
-        <div
-          className={`flex items-center justify-center gap-4 transition-all duration-700 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-          }`}
-          style={{ transitionDelay: "800ms" }}
-        >
-          {[
-            { icon: "GH", href: "https://github.com", label: "GitHub" },
-            { icon: "LI", href: "https://linkedin.com", label: "LinkedIn" },
-            { icon: <Mail size={18} />, href: "mailto:ali@example.com", label: "Email" },
-          ].map((social) => (
-            <a
-              key={social.label}
-              href={social.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative w-10 h-10 rounded-xl border border-[#1f1f1f] bg-[#141414]/80 flex items-center justify-center text-zinc-400 text-xs font-bold overflow-hidden transition-all duration-300 hover:text-blue-400 hover:border-blue-500/50 hover:scale-110 hover:-translate-y-1"
-              style={{ fontFamily: "var(--font-heading)" }}
-            >
-              <span className="absolute inset-0 bg-blue-500/0 group-hover:bg-blue-500/10 transition-all duration-300" />
-              <span className="relative z-10">{social.icon}</span>
-            </a>
-          ))}
-        </div>
+       {/* Email Link */}
+<div
+  className={`flex items-center justify-center transition-all duration-700 ${
+    isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+  }`}
+  style={{ transitionDelay: "800ms" }}
+>
+  <a
+    href="mailto:aliraaza701@gmail.com"
+    className="group relative w-10 h-10 rounded-xl border border-[#1f1f1f] bg-[#141414]/80 flex items-center justify-center text-zinc-400 overflow-hidden transition-all duration-300 hover:text-blue-400 hover:border-blue-500/50 hover:scale-110 hover:-translate-y-1"
+  >
+    <span className="absolute inset-0 bg-blue-500/0 group-hover:bg-blue-500/10 transition-all duration-300" />
+    <span className="relative z-10">
+      <Mail size={18} />
+    </span>
+  </a>
+</div>
 
         {/* Scroll */}
         <div

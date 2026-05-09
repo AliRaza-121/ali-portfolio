@@ -129,7 +129,7 @@ export default function Navbar() {
             style={{ fontFamily: "var(--font-heading)" }}
           >
             Ali
-            <span className="text-blue-500 inline-block group-hover:scale-125 transition-transform duration-300">.dev</span>
+            <span className="text-blue-500 inline-block group-hover:scale-125 transition-transform duration-300">.Dev</span>
           </span>
           <span className="absolute -inset-2 bg-blue-500/10 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300" />
         </a>

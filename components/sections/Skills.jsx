@@ -11,7 +11,6 @@ const skills = [
   { name: "Node.js", icon: "🟢", level: "Intermediate", color: "green" },
   { name: "MongoDB", icon: "🍃", level: "Intermediate", color: "green" },
   { name: "Tailwind CSS", icon: "🎨", level: "Advanced", color: "cyan" },
-  { name: "TypeScript", icon: "🔷", level: "Intermediate", color: "blue" },
   { name: "Git", icon: "📦", level: "Intermediate", color: "orange" },
 ];
 
