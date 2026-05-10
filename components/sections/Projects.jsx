@@ -5,21 +5,28 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 import { ExternalLink, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 
+// 👇 UPDATE THIS ARRAY WITH YOUR REAL PROJECTS 👇
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce store with user authentication, product management, cart functionality, and payment integration.",
-    image: "🛒", tags: ["Next.js", "MongoDB", "Tailwind", "Stripe"], liveUrl: "#", githubUrl: "#",
+    title: "Bahria Town RolePlay",
+    description: "An official website for viewing rules and information about a GTA V FiveM roleplay server.",
+    image: "/bahria.png", // Update this with your exact filename in the public folder
+    tags: ["Next.js", "Tailwind"],
+    liveUrl: "https://bahria-town-rp.vercel.app/",
   },
   {
-    title: "Task Management App",
-    description: "A collaborative project management tool with real-time updates, drag-and-drop boards, team features, and deadline tracking.",
-    image: "📋", tags: ["React", "Node.js", "MongoDB", "Socket.io"], liveUrl: "#", githubUrl: "#",
+    title: "WeatherWise",
+    description: "WeatherWise - Your Personal Weather Companion.",
+    image: "/weatherwise.png", // Update this with your exact filename in the public folder
+    tags: ["Next.js", "Tailwind"],
+    liveUrl: "https://weatherwise-orcin.vercel.app/",
   },
   {
-    title: "Social Media Dashboard",
-    description: "An analytics dashboard for tracking social media metrics with interactive charts, real-time data, and export functionality.",
-    image: "📊", tags: ["Next.js", "Tailwind", "Chart.js", "REST API"], liveUrl: "#", githubUrl: "#",
+    title: "Quest Free",
+    description: "The ultimate gamer vault. Track free deals from Steam, Epic, and GOG.",
+    image: "/questfree.png", // Update this with your exact filename in the public folder
+    tags: ["Next.js", "Tailwind"],
+    liveUrl: "https://www.questfree.site/",
   },
 ];
 
@@ -38,10 +45,18 @@ export default function Projects() {
                 <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 
                 <div className="h-48 bg-[#0f0f0f] flex items-center justify-center relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-all duration-500" />
-                  <motion.span whileHover={{ scale: 1.2, rotate: 10 }} className="text-6xl relative z-10 group-hover:drop-shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all duration-300">{project.image}</motion.span>
-                  <div className="absolute inset-0 bg-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="absolute top-4 right-4 w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:rotate-0 rotate-45">
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-all duration-500 z-10" />
+                  
+                  {/* Replaced emoji with an image tag pointing to the public folder */}
+                  <motion.img 
+                    whileHover={{ scale: 1.05 }} 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover relative z-0 transition-all duration-300"
+                  />
+                  
+                  <div className="absolute inset-0 bg-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
+                  <div className="absolute top-4 right-4 w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:rotate-0 rotate-45 z-20">
                     <ArrowUpRight size={14} className="text-white" />
                   </div>
                 </div>
@@ -57,9 +72,7 @@ export default function Projects() {
                   </div>
 
                   <div className="flex items-center gap-3 pt-4 border-t border-[#1f1f1f]">
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="group/btn flex-1 flex items-center justify-center gap-2 px-4 py-2.5 border border-[#1f1f1f] text-zinc-400 hover:text-white hover:bg-white/5 hover:border-white/20 rounded-lg text-sm transition-all duration-300" style={{ fontFamily: "var(--font-heading)" }}>
-                      <span className="group-hover/btn:scale-110 transition-transform duration-200">GH</span> Code
-                    </a>
+                    {/* GitHub button removed, Live Demo button will naturally stretch to full width thanks to flex-1 */}
                     <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="group/btn relative flex-1 flex items-center justify-center gap-2 px-4 py-2.5 text-white rounded-lg text-sm overflow-hidden transition-all duration-300" style={{ fontFamily: "var(--font-heading)" }}>
                       <span className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-500 group-hover/btn:from-blue-500 group-hover/btn:to-purple-500 transition-all duration-500" />
                       <span className="relative z-10 flex items-center gap-2">
