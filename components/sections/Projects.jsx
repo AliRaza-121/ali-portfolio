@@ -10,21 +10,21 @@ const projects = [
   {
     title: "Bahria Town RolePlay",
     description: "An official website for viewing rules and information about a GTA V FiveM roleplay server.",
-    image: "/bahria.png", // Update this with your exact filename in the public folder
+    image: "/bahria.PNG", // Update this with your exact filename in the public folder
     tags: ["Next.js", "Tailwind"],
     liveUrl: "https://bahria-town-rp.vercel.app/",
   },
   {
     title: "WeatherWise",
     description: "WeatherWise - Your Personal Weather Companion.",
-    image: "/weatherwise.png", // Update this with your exact filename in the public folder
+    image: "/weatherwise.PNG", // Update this with your exact filename in the public folder
     tags: ["Next.js", "Tailwind"],
     liveUrl: "https://weatherwise-orcin.vercel.app/",
   },
   {
     title: "Quest Free",
     description: "The ultimate gamer vault. Track free deals from Steam, Epic, and GOG.",
-    image: "/questfree.png", // Update this with your exact filename in the public folder
+    image: "/questfree.PNG", // Update this with your exact filename in the public folder
     tags: ["Next.js", "Tailwind"],
     liveUrl: "https://www.questfree.site/",
   },
