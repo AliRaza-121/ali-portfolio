@@ -22,18 +22,21 @@ const contactInfo = [
     icon: <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-blue-500" />,
     label: "Email",
     value: "aliraaza701@gmail.com",
-    href: "aliraaza701@gmail.com",
+    shortValue: "Email Me",
+    href: "mailto:aliraaza701@gmail.com",
   },
   {
     icon: <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-blue-500" />,
     label: "Location",
     value: "Pakistan",
+    shortValue: "Pakistan",
     href: null,
   },
   {
     icon: <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-blue-500" />,
     label: "Response",
     value: "Within 24 hours",
+    shortValue: "24 hours",
     href: null,
   },
 ];
@@ -203,16 +206,17 @@ export default function Contact() {
                       <div>
                         <p
                           className="text-[10px] sm:text-xs text-zinc-500"
-                          style={{ fontFamily: "var(--font-mono)" }}
+                         style={{ fontFamily: "var(--font-mono)" }}
                         >
                           {info.label}
                         </p>
-                        <p
-                          className="text-[11px] sm:text-sm text-white"
-                          style={{ fontFamily: "var(--font-heading)" }}
-                        >
-                          {info.value}
-                        </p>
+                       <p
+  className="text-[11px] sm:text-sm text-white break-all sm:break-normal"
+  style={{ fontFamily: "var(--font-heading)" }}
+>
+  <span className="hidden sm:inline">{info.value}</span>
+  <span className="sm:hidden">{info.shortValue}</span>
+</p>
                       </div>
                     </div>
                   </div>
