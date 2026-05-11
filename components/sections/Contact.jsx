@@ -334,7 +334,7 @@ export default function Contact() {
                           style={{ fontFamily: "var(--font-mono)" }}
                         >
                           <User size={10} />
-                          Your Email
+                          Your Name
                         </label>
                         <input
                           name="name"
