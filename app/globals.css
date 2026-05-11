@@ -6,6 +6,11 @@
   --font-mono: var(--font-mono), monospace;
 }
 
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -33,7 +38,6 @@ body {
   background: #60a5fa;
 }
 
-/* Glow Animation */
 @keyframes glow-pulse {
   0%, 100% {
     box-shadow: 0 0 5px rgba(59, 130, 246, 0.3);
@@ -43,7 +47,6 @@ body {
   }
 }
 
-/* Shimmer Effect */
 @keyframes shimmer {
   0% {
     background-position: -200% center;
@@ -53,7 +56,6 @@ body {
   }
 }
 
-/* Border Glow */
 @keyframes border-glow {
   0%, 100% {
     border-color: rgba(59, 130, 246, 0.2);
@@ -63,7 +65,6 @@ body {
   }
 }
 
-/* Float Animation */
 @keyframes float {
   0%, 100% {
     transform: translateY(0px);
@@ -73,7 +74,6 @@ body {
   }
 }
 
-/* Gradient Text Animation */
 @keyframes gradient-text {
   0% {
     background-position: 0% center;
@@ -86,7 +86,6 @@ body {
   }
 }
 
-/* Navbar Line Animation */
 @keyframes nav-line {
   0% {
     left: -100%;
@@ -95,6 +94,7 @@ body {
     left: 100%;
   }
 }
+
 @keyframes blink {
   0%, 100% {
     opacity: 1;
@@ -103,6 +103,7 @@ body {
     opacity: 0;
   }
 }
+
 @keyframes loading-bar {
   0% {
     transform: translateX(-100%);
