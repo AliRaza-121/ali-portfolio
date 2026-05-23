@@ -1,6 +1,8 @@
 "use client";
 
 import { ArrowDown, Mail } from "lucide-react";
+import PrimaryButton from "@/components/ui/PrimaryButton";
+import SecondaryButton from "@/components/ui/SecondaryButton";
 
 export default function Hero() {
   return (
@@ -100,42 +102,20 @@ export default function Hero() {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-10 sm:mb-12">
-          <a
-            href="#projects"
-            className="group relative w-full sm:w-auto px-8 py-3 text-white font-medium rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 text-center"
-          >
-            <span className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-500 group-hover:from-blue-500 group-hover:to-purple-500 transition-all duration-500" />
-            <span className="absolute -inset-2 bg-blue-500/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            <span
-              className="relative z-10 flex items-center justify-center gap-2 tracking-wide"
-              style={{ fontFamily: "var(--font-heading)" }}
-            >
-              View My Work
-              <span className="group-hover:translate-x-1 transition-transform duration-300">
-                →
-              </span>
-            </span>
-          </a>
-          <a
-            href="#contact"
-            className="group relative w-full sm:w-auto px-8 py-3 text-zinc-300 font-medium rounded-xl border border-[#1f1f1f] overflow-hidden transition-all duration-300 hover:scale-105 hover:text-white hover:border-blue-500/30 text-center"
-          >
-            <span className="absolute inset-0 bg-gradient-to-r from-blue-500/0 to-purple-500/0 group-hover:from-blue-500/10 group-hover:to-purple-500/10 transition-all duration-500" />
-            <span
-              className="relative z-10 flex items-center justify-center gap-2 tracking-wide"
-              style={{ fontFamily: "var(--font-heading)" }}
-            >
-              Get In Touch
-              <span className="group-hover:rotate-45 transition-transform duration-300">
-                ↗
-              </span>
-            </span>
-          </a>
+          <PrimaryButton href="#projects">
+            View My Work
+            <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
+          </PrimaryButton>
+          <SecondaryButton href="#contact">
+            Get In Touch
+            <span className="group-hover:rotate-45 transition-transform duration-300">↗</span>
+          </SecondaryButton>
         </div>
 
         <div className="flex items-center justify-center">
           <a
             href="mailto:ali@example.com"
+            aria-label="Email Me"
             className="group relative w-10 h-10 rounded-xl border border-[#1f1f1f] bg-[#141414]/80 flex items-center justify-center text-zinc-400 overflow-hidden transition-all duration-300 hover:text-blue-400 hover:border-blue-500/50 hover:scale-110 hover:-translate-y-1"
           >
             <span className="absolute inset-0 bg-blue-500/0 group-hover:bg-blue-500/10 transition-all duration-300" />

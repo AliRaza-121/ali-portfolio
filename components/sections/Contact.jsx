@@ -17,29 +17,7 @@ import {
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const contactInfo = [
-  {
-    icon: <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-blue-500" />,
-    label: "Email",
-    value: "aliraaza701@gmail.com",
-    shortValue: "Email Me",
-    href: "mailto:aliraaza701@gmail.com",
-  },
-  {
-    icon: <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-blue-500" />,
-    label: "Location",
-    value: "Pakistan",
-    shortValue: "Pakistan",
-    href: null,
-  },
-  {
-    icon: <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-blue-500" />,
-    label: "Response",
-    value: "Within 24 hours",
-    shortValue: "24 hours",
-    href: null,
-  },
-];
+import { contactInfo } from "@/lib/data";
 
 export default function Contact() {
   const [status, setStatus] = useState("idle");

@@ -4,15 +4,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { motion } from "framer-motion";
 
-const skills = [
-  { name: "React", icon: "⚛️", level: "Advanced", color: "blue" },
-  { name: "Next.js", icon: "▲", level: "Advanced", color: "white" },
-  { name: "JavaScript", icon: "🟨", level: "Advanced", color: "yellow" },
-  { name: "Node.js", icon: "🟢", level: "Intermediate", color: "green" },
-  { name: "MongoDB", icon: "🍃", level: "Intermediate", color: "green" },
-  { name: "Tailwind CSS", icon: "🎨", level: "Advanced", color: "cyan" },
-  { name: "Git", icon: "📦", level: "Intermediate", color: "orange" },
-];
+import { skills } from "@/lib/data";
 
 const colorMap = {
   blue: "hover:border-blue-500/40 hover:shadow-blue-500/10",

@@ -3,13 +3,7 @@
 import { Heart, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 
-const footerLinks = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Contact", href: "#contact" },
-];
+import { footerLinks } from "@/lib/data";
 
 export default function Footer() {
   return (
@@ -49,6 +43,7 @@ export default function Footer() {
           {/* Email Only */}
           <motion.a
             href="mailto:aliraaza701@gmail.com"
+            aria-label="Email Me"
             whileHover={{ scale: 1.1, y: -3 }}
             whileTap={{ scale: 0.95 }}
             className="group relative w-8 h-8 sm:w-9 sm:h-9 rounded-lg border border-[#1f1f1f] bg-[#141414] flex items-center justify-center text-zinc-500 hover:text-blue-500 hover:border-blue-500/30 transition-all duration-300 overflow-hidden"

@@ -6,12 +6,7 @@ import { Code2, Coffee, Rocket, Users } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const quickFacts = [
-  { icon: <Code2 className="w-5 h-5 text-blue-500" />, label: "Experience", value: "3+ Years" },
-  { icon: <Rocket className="w-5 h-5 text-blue-500" />, label: "Projects", value: "20+ Done" },
-  { icon: <Users className="w-5 h-5 text-blue-500" />, label: "Clients", value: "15+ Happy" },
-  { icon: <Coffee className="w-5 h-5 text-blue-500" />, label: "Coffee", value: "∞ Cups" },
-];
+import { quickFacts } from "@/lib/data";
 
 export default function About() {
   return (

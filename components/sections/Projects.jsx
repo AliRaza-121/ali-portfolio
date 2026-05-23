@@ -4,31 +4,10 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { ExternalLink, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import { projects } from "@/lib/data";
 
-// 👇 UPDATE THIS ARRAY WITH YOUR REAL PROJECTS 👇
-const projects = [
-  {
-    title: "Bahria Town RolePlay",
-    description: "An official website for viewing rules and information about a GTA V FiveM roleplay server.",
-    image: "/bahria.PNG", // Update this with your exact filename in the public folder
-    tags: ["Next.js", "Tailwind"],
-    liveUrl: "https://bahria-town-rp.vercel.app/",
-  },
-  {
-    title: "WeatherWise",
-    description: "WeatherWise - Your Personal Weather Companion.",
-    image: "/weatherwise.PNG", // Update this with your exact filename in the public folder
-    tags: ["Next.js", "Tailwind"],
-    liveUrl: "https://weatherwise-orcin.vercel.app/",
-  },
-  {
-    title: "Quest Free",
-    description: "The ultimate gamer vault. Track free deals from Steam, Epic, and GOG.",
-    image: "/questfree.PNG", // Update this with your exact filename in the public folder
-    tags: ["Next.js", "Tailwind"],
-    liveUrl: "https://www.questfree.site/",
-  },
-];
+const MotionImage = motion(Image);
 
 export default function Projects() {
   return (
@@ -48,16 +27,18 @@ export default function Projects() {
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-all duration-500 z-10" />
                   
                   {/* Replaced emoji with an image tag pointing to the public folder */}
-                  <motion.img 
+                  <MotionImage 
                     whileHover={{ scale: 1.05 }} 
                     src={project.image} 
                     alt={project.title}
-                    className="w-full h-full object-cover relative z-0 transition-all duration-300"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover relative z-0 transition-all duration-300"
                   />
                   
                   <div className="absolute inset-0 bg-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
                   <div className="absolute top-4 right-4 w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:rotate-0 rotate-45 z-20">
-                    <ArrowUpRight size={14} className="text-white" />
+                    <ArrowUpRight size={14} className="text-white" aria-hidden="true" />
                   </div>
                 </div>
 
