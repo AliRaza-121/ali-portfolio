@@ -17,7 +17,7 @@ export default function Projects() {
           <SectionHeading subtitle="My Work" title="Featured" highlight="Projects" />
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-6">
           {projects.map((project, index) => (
             <ScrollReveal key={project.title} delay={index * 0.15}>
               <motion.div whileHover={{ y: -8 }} className="group bg-[#141414] border border-[#1f1f1f] rounded-xl overflow-hidden hover:border-blue-500/30 transition-all duration-500 hover:shadow-[0_20px_60px_rgba(0,0,0,0.4),0_0_30px_rgba(59,130,246,0.1)] h-full flex flex-col relative">
